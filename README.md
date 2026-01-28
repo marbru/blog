@@ -27,7 +27,7 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 
 ## Writing
 
-Posts go on [content/blog/](), each in their own directory. Content like images or any other assets go in the post folder. Post text goes on a `post.md` file. 
+Posts go on [content/blog/](), each in their own directory. Directory name will become the url segment for that post. Content should go on a `.md` file matching the same name as the directory. Assets particular to that post (like images or any downloads) should go in the folder as well, and linked relatively from the post content.
 
 ## Notes
 
