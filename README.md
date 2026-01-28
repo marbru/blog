@@ -31,6 +31,6 @@ Posts go on [content/blog/](), each in their own directory. Directory name will 
 
 ## Notes
 
-- Blog base url lives on [_data/metadata.js]().
+- Blog base url lives on [_data/metadata.js](). Other settings are in [eleventy.config.js]().
 - The content on `./public` will be copied to `./_site` at build time. Eg: `./public/css/*` will live at `./_site/css/*`.
 - URLs get `/content/` prepended automatically by the `HtmlBasePlugin`. Use `eleventy:ignore` to override (eg, done in [_includes/layouts/base.njk])
