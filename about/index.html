@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Bardic Inspiration</title>
-		<meta name="description" content="Personal blog of Mar Bartolomé">
+		<meta name="description" content="The sung thoughts of Mar Bartolomé">
 		<link rel="alternate" href="/blog/feed/feed.xml" type="application/atom+xml" title="Bardic Inspiration">
 		<meta name="generator" content="Eleventy v3.1.2">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -117,6 +117,36 @@ p:last-child {
 	display: block;
 	margin: 0 auto;
 } */
+
+/* End of Content ornament */
+.eoc-ornament {
+	display: block;
+	margin: 2em auto;
+	max-width: 150px;
+	opacity: 0.7;
+}
+
+/* Text separator */
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 1.5em 0;
+	color: var(--color-gray-50);
+}
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 1px solid var(--color-gray-50);
+}
+.separator::before {
+	margin-right: 0.5em;
+}
+.separator::after {
+	margin-left: 0.5em;
+}
+
 p {
 	line-height: 1.5;
 }
@@ -323,14 +353,23 @@ header {
 	align-self: center;
 }
 
-/* Tags list */
+.latest-posts-heading {
+	font-weight: normal;
+}
+
+/* Tags list and date */
 .post-metadata {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 	gap: .5em;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+/* Margin between metadata and post title */
+.post-metadata + h1 {
+	margin-top: 0.5em;
 }
 .post-metadata time {
 	margin-right: 1em;
@@ -343,7 +382,7 @@ header {
 		<header>
 			<div class="header-content">
 				<a href="/blog/" class="home-link">Bardic Inspiration</a>
-				<p class="site-description">Personal blog of Mar Bartolomé</p>
+				<p class="site-description">The sung thoughts of Mar Bartolomé</p>
 				<nav>
 					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 					<ul class="nav">
@@ -391,32 +430,33 @@ header {
 
 <h1 id="about">About</h1>
 <p>Hello! My name is Mar Bartolomé, and this is where I sing my personal thoughts and ramblings for those who care to stop and listen.</p>
-<p>As you can probably guess, I am a huge geek, and I enjoy playing D&amp;D: when I do, I become <em>Marion the Bard</em>, adventuring minstrel.</p>
+<p>As you can probably guess, I am a huge geek, and I enjoy playing D&amp;D: when I do, I become <em>Marion the Bard</em>, adventuring minstrel extraordinaire.</p>
 <p><a href="https://dnd5e.wikidot.com/bard">Bards in D&amp;D</a> are jack-of-all-trades support characters - they can do some spells, or focus on physical attacks depending on the subclass, but where they really shine is in buffing and supporting the rest of the party. <a href="https://roll20.net/compendium/dnd5e/Bardic%20Inspiration#content"><em>Bardic inspiration</em></a> is a core ability of bards that results in more favorable die rolls for those who get inspired.</p>
 <p>So that is exactly what I intend with my writing: to inspire and empower those around me.</p>
-<h2 id="irl">IRL</h2>
+<div class="separator">❧</div>
 <p>In the <a href="https://matrix.fandom.com/wiki/Real_World">Real World</a>, my main occupation is being a software developer. I offer my services as a freelancer (<a href="https://coconauts.net/">you can hire me!</a>), but also I love coding my own projects for fun, and sharing them with the world in <a href="https://coconauts.net/blog/">my other blog</a>. I am a big advocate for the <a href="https://www.gnu.org/philosophy/free-software-intro.html">free/open source software culture</a>, and just freedom and community in general.</p>
 <p>My other main occupation is being a mom: I am happily married and have two amazing kids, which fill my life with love and joy every single minute.</p>
 <p>I have way too many hobbies for my own good, but if I have to feature some, I'd say music (I'm a classically trained pianist) and videogames (particularly retro or indie). But as I mentioned before, I just enjoy anything geeky (movies, series, books...).</p>
-<h2 id="about-the-blog">About the blog</h2>
+<div class="separator">❧</div>
+<p>For more about me, including contact and socials, visit my <a href="http://mar.coconauts.net">landing page</a>.</p>
 <p>This blog was made using <a href="https://www.11ty.dev/">eleventy</a>, and <a href="https://github.com/marbru/bardic-inspiration-blog">the source code is public on github</a>.</p>
-<p>Other attributions:</p>
+<p>Image attributions:</p>
 <ul>
 <li><a href="https://openclipart.org/detail/351054/lute">Lute header illustration</a></li>
-<li><a href="https://en.wikipedia.org/wiki/File:D%26DMimic.JPG">Mimic illustration</a> (on the 404 page)</li>
+<li><a href="https://en.wikipedia.org/wiki/File:D%26DMimic.JPG">Mimic illustration</a></li>
+<li><a href="https://openclipart.org/detail/219942/horizontal-ornamental-scroll-rule">Ornament</a></li>
 </ul>
 
+
+
+				<img src="/blog/img/ornament.png" alt="" class="eoc-ornament">
 
 			</heading-anchors>
 		</main>
 
-		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
-			</p>
-		</footer>
+		
 
-		<!-- This page `/about/` was built on 2026-01-29T09:58:19.787Z -->
+		<!-- This page `/about/` was built on 2026-01-29T11:38:57.128Z -->
 		<script type="module" src="/blog/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>

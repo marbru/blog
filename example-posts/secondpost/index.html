@@ -117,6 +117,36 @@ p:last-child {
 	display: block;
 	margin: 0 auto;
 } */
+
+/* End of Content ornament */
+.eoc-ornament {
+	display: block;
+	margin: 2em auto;
+	max-width: 150px;
+	opacity: 0.7;
+}
+
+/* Text separator */
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 1.5em 0;
+	color: var(--color-gray-50);
+}
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 1px solid var(--color-gray-50);
+}
+.separator::before {
+	margin-right: 0.5em;
+}
+.separator::after {
+	margin-left: 0.5em;
+}
+
 p {
 	line-height: 1.5;
 }
@@ -323,14 +353,23 @@ header {
 	align-self: center;
 }
 
-/* Tags list */
+.latest-posts-heading {
+	font-weight: normal;
+}
+
+/* Tags list and date */
 .post-metadata {
-	display: inline-flex;
+	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 	gap: .5em;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+}
+/* Margin between metadata and post title */
+.post-metadata + h1 {
+	margin-top: 0.5em;
 }
 .post-metadata time {
 	margin-right: 1em;
@@ -343,7 +382,7 @@ header {
 		<header>
 			<div class="header-content">
 				<a href="/blog/" class="home-link">Bardic Inspiration</a>
-				<p class="site-description">Personal blog of Mar Bartolomé</p>
+				<p class="site-description">The sung thoughts of Mar Bartolomé</p>
 				<nav>
 					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
 					<ul class="nav">
@@ -397,16 +436,15 @@ header {
 <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
 
+
+				<img src="/blog/img/ornament.png" alt="" class="eoc-ornament">
+
 			</heading-anchors>
 		</main>
 
-		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
-			</p>
-		</footer>
+		
 
-		<!-- This page `/example-posts/secondpost/` was built on 2026-01-29T09:58:19.786Z -->
+		<!-- This page `/example-posts/secondpost/` was built on 2026-01-29T11:38:57.127Z -->
 		<script type="module" src="/blog/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>

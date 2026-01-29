@@ -2,7 +2,7 @@
 <?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Bardic Inspiration</title>
-  <subtitle>Personal blog of Mar Bartolomé</subtitle>
+  <subtitle>The sung thoughts of Mar Bartolomé</subtitle>
   <link href="https://mar.coconauts.net/blog/feed/feed.xml" rel="self" />
   <link href="https://mar.coconauts.net/blog/blog/" />
   <updated>2025-01-30T00:00:00Z</updated>
