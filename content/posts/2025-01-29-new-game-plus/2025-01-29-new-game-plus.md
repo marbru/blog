@@ -1,6 +1,6 @@
 ---
 title: New Game Plus
-date: 2025-01-30
+date: 2025-01-29
 ---
 
 A new year, a new life, a new blog.
@@ -13,6 +13,6 @@ At first, I thought this change would be temporary. Just while the baby is small
 
 Except, that's not that easy when your old life was all about technology. The field moves incredibly fast, particularly web development. You blink an eye, and there's not just a handful of new JS frameworks or cloud shenanigans, but there's also [a magical genie](https://claude.ai/) that writes all the code for us. The more time you spend out of the loop, the more detached you become, and that makes it harder still to come back. A cursed cycle.
 
-It's been several years now, more than I would like to admit. And despite having a ton of experience in the field, I do feel a bit like I'm starting all over from scratch: I have a million new things to learn, and I've lost the familiarity with the technologies I used to work with. And let's not even talk about applying to jobs... Because right now [even grown senior devs are crying manly tears](https://news.ycombinator.com/item?id=45306539) over that. It feels somehow like my career is back to square one.
+It's been several years now, more than I would like to admit. And despite having a ton of experience in the field, I do feel a bit like I'm starting all over from scratch: I have a million new things to learn, and I've lost the familiarity with the technologies I used to work with. And let's not even talk about applying to jobs... Because right now [even grown senior devs are shedding manly tears](https://news.ycombinator.com/item?id=45306539) over that. It feels somehow like my career is back to square one.
 
 But I'd like to think it's not. The game indeed has reseted, but I still have with me a wealth of knowledge that took me a lifetime to learn. And this new magical genie, [as chaotic as it is](https://en.wikipedia.org/wiki/Alignment_\(Dungeons_%26_Dragons\)#Law_versus_chaos), can also become a powerful ally. So it's not really a new game: it's new game plus.
