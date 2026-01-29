@@ -27,10 +27,10 @@ Or you can run [debug mode](https://www.11ty.dev/docs/debugging/) to see all the
 
 ## Writing
 
-Posts go on [content/blog/](), each in their own directory. Directory name will become the url segment for that post. Content should go on a `.md` file matching the same name as the directory. Assets particular to that post (like images or any downloads) should go in the folder as well, and linked relatively from the post content.  
+Posts go on [content/blog/](content/blog/), each in their own directory. Directory name will become the url segment for that post. Content should go on a `.md` file matching the same name as the directory. Assets particular to that post (like images or any downloads) should go in the folder as well, and linked relatively from the post content.  
 
 ## Notes
 
-- Blog base url lives on [_data/metadata.js](). Other settings are in [eleventy.config.js]().
+- Blog base url lives on [](_data/metadata.js). Other settings are in [eleventy.config.js](eleventy.config.js).
 - The content on `./public` will be copied to `./_site` at build time. Eg: `./public/css/*` will live at `./_site/css/*`.
-- URLs get `/content/` prepended automatically by the `HtmlBasePlugin`. Use `eleventy:ignore` to override (eg, done in [_includes/layouts/base.njk])
+- URLs get `/content/` prepended automatically by the `HtmlBasePlugin`. Use `eleventy:ignore` to override (eg, done in [_includes/layouts/base.njk](_includes/layouts/base.njk))
