@@ -66,14 +66,19 @@
 		<main id="main">
 			<heading-anchors>
 				{{ content | safe }}
+
+				<img src="/img/ornament.png" alt="" class="eoc-ornament" eleventy:ignore>
+
 			</heading-anchors>
 		</main>
 
+		{#
 		<footer>
-			<p>
-				<em>Built with <a href="https://www.11ty.dev/">{{ eleventy.generator }}</a></em>
+			<p class="footer-text">
+				<em>Yours truly, Marion the Bard, aka <a href="https://mar.coconauts.net/">Mar Bartolomé</a></em>
 			</p>
 		</footer>
+		#}
 
 		<!-- This page `{{ page.url }}` was built on {% currentBuildDate %} -->
 		<script type="module" src="{% getBundleFileUrl "js" %}"></script>

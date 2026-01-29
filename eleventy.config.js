@@ -120,8 +120,8 @@ export default async function (eleventyConfig) {
 		return (new Date()).toISOString();
 	});
 
-	eleventyConfig.addShortcode("divider", () => {
-		return '<img src="/img/ornament.png" alt="" class="divider" eleventy:ignore>';
+	eleventyConfig.addShortcode("separator", () => {
+		return '<div class="separator">❧</div>';
 	});
 
 	// Features to make your build faster (when you need them)
