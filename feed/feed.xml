@@ -3,18 +3,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
   <title>Bardic Inspiration</title>
   <subtitle>Personal blog of Mar Bartolomé</subtitle>
-  <link href="https://bardic.coconauts.net/bardic-inspiration-blog/feed/feed.xml" rel="self" />
-  <link href="https://bardic.coconauts.net/bardic-inspiration-blog/" />
+  <link href="https://bardic.coconauts.net/feed/feed.xml" rel="self" />
+  <link href="https://bardic.coconauts.net/" />
   <updated>2025-01-30T00:00:00Z</updated>
-  <id>https://bardic.coconauts.net/bardic-inspiration-blog/</id>
+  <id>https://bardic.coconauts.net/</id>
   <author>
     <name>Mar Bartolomé</name>
   </author>
   <entry>
     <title>New game plus</title>
-    <link href="https://bardic.coconauts.net/bardic-inspiration-blog/posts/2025-01-29-new-game-plus/" />
+    <link href="https://bardic.coconauts.net/posts/2025-01-29-new-game-plus/" />
     <updated>2025-01-30T00:00:00Z</updated>
-    <id>https://bardic.coconauts.net/bardic-inspiration-blog/posts/2025-01-29-new-game-plus/</id>
+    <id>https://bardic.coconauts.net/posts/2025-01-29-new-game-plus/</id>
     <content type="html">&lt;p&gt;A new year, a new life, a new blog.&lt;/p&gt;
 &lt;p&gt;Becoming a parent is such a radical change in life. One I couldn&#39;t possibly anticipate. Your old self dies, in a way, and you are reborn as a different person. One with different priorities and views of life, with different occupations, even a different body. I use to tell people that to me, becoming a mother feels like &lt;a href=&quot;https://en.wikipedia.org/wiki/New_Game_Plus&quot;&gt;a new game plus&lt;/a&gt;: your game ends, and you get to relive it (from a passenger seat) from the very beginning, but keeping all your accumulated experience and items.&lt;/p&gt;
 &lt;p&gt;When you work with technology, the change is particularly disruptive. All of a sudden, you go from spending most of your time typing on a pc to nursing a baby non-stop. You go from reading tutorials and documentation to studying parenting books, in the hopes to try and figure out this unintuitive little creature. From attending tech talks, to doctor checkups, from hanging with other geeks, to joining normie mom groups.&lt;/p&gt;
