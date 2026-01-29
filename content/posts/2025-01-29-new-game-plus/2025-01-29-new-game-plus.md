@@ -1,5 +1,5 @@
 ---
-title: New game plus
+title: New Game Plus
 date: 2025-01-30
 ---
 
