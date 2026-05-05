@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Code never mattered in the first place - Bardic Inspiration</title>
+		<meta name="description" content="The sung thoughts of Mar Bartolomé">
+		<link rel="icon" href="/blog/img/lute.png" type="image/png">
+		<link rel="alternate" href="/blog/feed/feed.xml" type="application/atom+xml" title="Bardic Inspiration">
+		<meta name="generator" content="Eleventy v3.1.2">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+		<link href="https://fonts.googleapis.com/css2?family=Almendra:wght@700&display=swap" rel="stylesheet">
+		
+		
+		
+		<style>/* This is an arbitrary CSS string added to the bundle */
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+@view-transition {
+	navigation: auto;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+/* Fluid images via https://www.zachleat.com/web/fluid-images/ */
+img{
+  max-width: 100%;
+}
+img[width][height] {
+  height: auto;
+}
+img[src$=".svg"] {
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+video,
+iframe {
+	width: 100%;
+	height: auto;
+}
+iframe {
+	aspect-ratio: 16/9;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+
+/* 404 page */
+/* [class="404-image"] {
+	display: block;
+	margin: 0 auto;
+} */
+
+/* End of Content ornament */
+.eoc-ornament {
+	display: block;
+	margin: 2em auto;
+	max-width: 150px;
+	opacity: 0.7;
+}
+
+/* Text separator */
+.separator {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	margin: 1.5em 0;
+	color: var(--color-gray-50);
+}
+.separator::before,
+.separator::after {
+	content: '';
+	flex: 1;
+	border-bottom: 1px solid var(--color-gray-50);
+}
+.separator::before {
+	margin-right: 0.5em;
+}
+.separator::after {
+	margin-left: 0.5em;
+}
+
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main,
+footer {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+	padding: 0.5rem 1rem;
+	border: 1px solid var(--color-gray-90);
+	border-radius: 2px;
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
+}
+
+.links-nextprev {
+	display: flex;
+	justify-content: space-between;
+	gap: .5em 1em;
+	list-style: "";
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+.links-nextprev > * {
+	flex-grow: 1;
+}
+.links-nextprev-next {
+	text-align: right;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	overflow-x: auto;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em;
+}
+.header-content {
+	flex: 1;
+}
+.header-image {
+	max-height: 120px;
+	width: auto;
+}
+@media (max-width: 450px) {
+	.header-image {
+		display: none;
+	}
+}
+.site-description {
+	margin: 0.25em 0 0.5em;
+	font-size: 0.9em;
+	color: var(--color-gray-90);
+	font-style: italic;
+}
+.home-link {
+	font-family: 'Almendra', serif;
+	font-size: 2em; /* 24px /16 */
+	font-weight: 700;
+	margin-top: 1em;
+	display: inline-block;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.header-content nav {
+	margin-top: 2em;
+}
+.nav {
+	display: flex;
+	gap: .5em 1em;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	counter-reset: start-from var(--postlist-index);
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+.latest-posts-heading {
+	font-weight: normal;
+}
+
+/* Tags list and date */
+.post-metadata {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+/* Margin between metadata and post title */
+.post-metadata + h1 {
+	margin-top: 0.5em;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	background: none;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border-radius: 0.3em;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #272822;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #8292a2;
+}
+
+.token.punctuation {
+	color: #f8f8f2;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.keyword {
+	color: #66d9ef;
+}
+
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+/*
+ * New diff- syntax
+ */
+
+pre[class*="language-diff-"] {
+	--eleventy-code-padding: 1.25em;
+	padding-left: var(--eleventy-code-padding);
+	padding-right: var(--eleventy-code-padding);
+}
+.token.deleted {
+	background-color: hsl(0, 51%, 37%);
+	color: inherit;
+}
+.token.inserted {
+	background-color: hsl(126, 31%, 39%);
+	color: inherit;
+}
+
+/* Make the + and - characters unselectable for copy/paste */
+.token.prefix.unchanged,
+.token.prefix.inserted,
+.token.prefix.deleted {
+	-webkit-user-select: none;
+	user-select: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.token.prefix.inserted,
+.token.prefix.deleted {
+	width: var(--eleventy-code-padding);
+	background-color: rgba(0,0,0,.2);
+}
+
+/* Optional: full-width background color */
+.token.inserted:not(.prefix),
+.token.deleted:not(.prefix) {
+	display: block;
+	margin-left: calc(-1 * var(--eleventy-code-padding));
+	margin-right: calc(-1 * var(--eleventy-code-padding));
+	text-decoration: none; /* override del, ins, mark defaults */
+	color: inherit; /* override del, ins, mark defaults */
+}</style>
+		
+	</head>
+	<body>
+		<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<div class="header-content">
+				<a href="/blog/" class="home-link">Bardic Inspiration</a>
+				<p class="site-description">The sung thoughts of Mar Bartolomé</p>
+				<nav>
+					<h2 class="visually-hidden" id="top-level-navigation-menu">Top level navigation menu</h2>
+					<ul class="nav">
+						<li class="nav-item"><a href="/blog/">Home</a></li>
+						<li class="nav-item"><a href="/blog/posts/">Archive</a></li>
+						<li class="nav-item"><a href="/blog/about/">About</a></li>
+						<li class="nav-item"><a href="/blog/feed/feed.xml">Feed</a></li>
+					</ul>
+				</nav>
+			</div>
+			<img src="/blog/img/lute.png" alt="Lute illustration" class="header-image">
+		</header>
+
+		<main id="main">
+			<heading-anchors>
+				
+
+
+
+
+<ul class="post-metadata">
+	<li><time datetime="2025-05-05">05 May 2025</time></li>
+</ul>
+
+<h1 id="code-never-mattered-in-the-first-place">Code never mattered in the first place</h1>
+
+<p>I always thought I really had a strike of luck for choosing tech as a career. Due to the technology boom in the last twenty years, it provided me with a steady source of engaging and well compensated jobs (at least until not so long ago).</p>
+<p>Back in the day, computing was regarded as more of a vocational path than anything else. Not artist-level &quot;you're gonna starve if you do this&quot;, but certainly more akin to any other office job. It was Common Knowledge™ when I started uni that if you wanted a high-paying job you should do medicine or architecture, and not tech. The dwellers in CS courses were just the stereotypical socially awkward nerds who just felt happier at a LAN-party than at a real one.</p>
+<p>The setting I'm describing is specifically in Spain, post dot-com boom (2005-2010), although it was probably similar elsewhere. The tech industry was not very mature in here at that time, but still there was a healthy and growing demand for software engineers: just not at very high rates. Employers were mostly big consultancies (think Deloittle, Accenture, or the most infamous one: Indra), which us rank-and-file devs often called &quot;meatshops&quot; (<em>cárnicas</em>), as the pricing structure for their projects was often based in how many <em>resources</em> (ie, developers) were allocated into them. Companies were interested in people that were simply code-literate enough to translate requirements into working software – but no one really cared about the quality of the code itself. The resulting software was not the best in the world, but companies got their businesses rolling regardless.</p>
+<p>If you're reading between lines you're surely starting to see a similarity to recent times. But let's not digress.</p>
+<p>By 2010 we start noticing a shift in the industry, with the arrival of a new kind of player: tech startups. These companies don't get money from clients (at least not while they are startups), but from <em>investors</em>. They are tying to emulate the playbook of the successful winners from the post-dot com era: Google, Amazon, Facebook... Which included giving engineers more agency rather than considering them simple code-monkeys. Before you know it, good engineering became a valuable asset, which a company could use to convince investors that it can be the next <em>unicorn</em> that will grow exponentially.</p>
+<p>And so, companies and their investors become very conscious about having the best engineering team they can get: they now hire for <em>ninja rockstars</em> using coding challenges, they pay better and better rates, they even offer engineers company stock. Investors are happy to fund fancy open plan offices in certain cities that are considered to be &quot;tech hubs&quot;, such as San Francisco or London, despite the high cost of living.</p>
+<p>There even comes a point where a company growing their engineering team is perceived as a <em>health signal</em> that they are expecting future growth, fueling higher market valuations or extra investment. On the other hand, slashing your workforce or even keeping their numbers stable would lead to uncomfortable questions and a negative sentiment from the market. Therefore, it's been the incentive of tech companies, wether big or small, to keep growing their engineering workforce, even if they didn't need it.</p>
+<p>Then enter generative AI. The big players in this industry are trying to convince everyone that their coding agents can replace or greatly reduce the need of having human software engineers. A single engineer can now orchestrate a fleet of agents that will churn in a day the same amount of tickets a team would do in a whole sprint. A product manager can now get from requirements to production with just a prompt.</p>
+<p>That's the salestalk at least. But wether these claims are true or not is beside the point: what matters is that <em>the market sentiment has changed</em>. Now companies don't need to hire engineers to signal growth: they can achieve the same by arguing they are harnessing the power of AI better than their competitors. Right now, firing your engineers and saying you don't need them anymore thanks to AI is a power move.</p>
+<p>We engineers tend to look at this trend with skepticism: surely this will lead to sloppy code! Businesses will lose their competitive advantage! But we fail to acknowledge the fact that well engineered software is really not that big of an asset to most companies. Indeed, many businesses are successful despite having very crappy codebases – even companies with huge and expensive tech teams! The reasons so much money was poured into engineering in the last twenty years had more to do with investor and market sentiment than practical needs.</p>
+<p>Despite the bleak picture this paints for us developers, I feel grateful for the good times while they lasted. It looks as if code doesn't matter anymore, but in fact it never mattered in the first place. So I feel lucky that for a few years, there was this glitch in capitalism in which money flowed in our direction for a bit.</p>
+
+<ul class="links-nextprev"><li class="links-nextprev-prev">← Previous<br> <a href="/blog/posts/new-game-plus/">New Game Plus</a></li>
+</ul>
+
+
+				<img src="/blog/img/ornament.png" alt="" class="eoc-ornament">
+
+			</heading-anchors>
+		</main>
+
+		
+
+		<!-- This page `/posts/code-never-mattered/` was built on 2026-05-05T10:52:24.135Z -->
+		<script type="module" src="/blog/dist/cC8wS6ZjFU.js"></script>
+	</body>
+</html>
